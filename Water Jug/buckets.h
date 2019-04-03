@@ -1,6 +1,5 @@
 #include <string>
 /* Class that models every situation for given two buckets.
- *
  */
 using namespace std;
 
