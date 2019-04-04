@@ -26,9 +26,28 @@ Every tree has 2 main branches one from fill bucket1 and the other one from fill
 
 You can see how tree looks like on Figure 2b. Figure 2a shows plotted graph in xy-coordinates. 
 
+## Is there anything special about the bucket operations?
+
+## How is the graph plotted in xy-coordinates?
+See the animation below. Every move stands for one of the allowed operations - fill bucket1, fill bucket2, empty bucket1, empty bucket2, pour from bucket1 to bucket2 and pour from bucket2 to bucket1. 
+<p align="center">
+  <img src="https://github.com/marie-yau/Algorithmic-Projects/blob/master/Water%20Jug/images/(3%2C5).gif" width="300" title="Github Logo">
+</p>
+
 ## Does the plotted graph in xy-coordinates depends on parity of m and n?
 Yes, the graph looks different based on parity of m and n:
 - m is even, n is odd: The middle vertical line is missing.
 - m is odd, n is odd: The middle diagonal is missing.
 - m is odd, n is even: The middle horizontal line is missing.
+<p align="center">
+  <img src="https://github.com/marie-yau/Algorithmic-Projects/blob/master/Water%20Jug/images/parity.png" width="600" title="Github Logo">
+</p>
 
+## Is the plotted graph in xy-coordinates symmetric?
+
+## Is it possible to find out last node of each branch of the tree?
+Yes. The last element of each branch depends on the parity of m and n. See table below.
+
+<p align="center">
+  <img src="https://github.com/marie-yau/Algorithmic-Projects/blob/master/Water%20Jug/images/tableLastElement.png" width="300" title="Github Logo">
+</p>
