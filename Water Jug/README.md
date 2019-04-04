@@ -27,9 +27,12 @@ Every tree has 2 main branches one from fill bucket1 and the other one from fill
 You can see how tree looks like on Figure 2b. Figure 2a shows plotted graph in xy-coordinates. 
 
 ## Is there anything special about the bucket operations?
+At any given moment at least one bucket is either full or empty. For example, when there are buckets <a href="https://www.codecogs.com/eqnedit.php?latex=(3,5)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?(3,5)" title="(3,5)" /></a>, it is not possible to get combination <a href="https://www.codecogs.com/eqnedit.php?latex=(2,2)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?(2,2)" title="(2,2)" /></a>.
+
+Because at any given moment at least one bucket is either full or empty, all bucket operations are reversible. Every operation has its inverse (fill bucket1 - empty bucket1, fill bucket2 - empty bucket2, pour from bucket1 to bucket2 - pour from bucket2 to bucket1). For example, when there are buckets <a href="https://www.codecogs.com/eqnedit.php?latex=(3,5)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?(3,5)" title="(3,5)" /></a> and the current combination is <a href="https://www.codecogs.com/eqnedit.php?latex=(2,2)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?(3,2)" title="(3,2)" /></a>. When you pour from bucket1 to bucket2, you get <a href="https://www.codecogs.com/eqnedit.php?latex=(2,2)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?(0,5)" title="(0,5)" /></a>. This operation can be reversed by pouring from bucket2 to bucket1. Then you get <a href="https://www.codecogs.com/eqnedit.php?latex=(2,2)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?(3,2)" title="(3,2)" /></a> and that is the combination you had before applying pour from bucket1 to bucket2.
 
 ## How is the graph plotted in xy-coordinates?
-See the animation below. Every move stands for one of the allowed operations - fill bucket1, fill bucket2, empty bucket1, empty bucket2, pour from bucket1 to bucket2 and pour from bucket2 to bucket1. 
+See the animation below. Every move stands for one of the allowed operations - fill bucket1, fill bucket2, empty bucket1, empty bucket2, pour from bucket1 to bucket2 and pour from bucket2 to bucket1. Note that the animation doesn't contain <a href="https://www.codecogs.com/eqnedit.php?latex=(m,n)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?(m,n)" title="(m,n)" /></a> because this point can be in either branch and it was distracting from the symmetry.
 <p align="center">
   <img src="https://github.com/marie-yau/Algorithmic-Projects/blob/master/Water%20Jug/images/(3%2C5).gif" width="300" title="Github Logo">
 </p>
@@ -44,6 +47,11 @@ Yes, the graph looks different based on parity of m and n:
 </p>
 
 ## Is the plotted graph in xy-coordinates symmetric?
+Yes, it is. Note that when you flip point <a href="https://www.codecogs.com/eqnedit.php?latex=(x,y)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?(x,y)" title="(x,y)" /></a> about <a href="https://www.codecogs.com/eqnedit.php?latex=\frac{n}{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{n}{2}" title="\frac{n}{2}" /></a> horizontal line and then flip it again about <a href="https://www.codecogs.com/eqnedit.php?latex=\frac{m}{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{m}{2}" title="\frac{m}{2}" /></a> vertical line, you get point <a href="https://www.codecogs.com/eqnedit.php?latex=(m-x,n-y)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?(m-x,n-y)" title="(m-x,n-y)" /></a> that is colored with the other color.
+
+<p align="center">
+  <img src="https://github.com/marie-yau/Algorithmic-Projects/blob/master/Water%20Jug/images/equationSymmetry.png" width="600" title="Github Logo">
+</p>
 
 ## Is it possible to find out last node of each branch of the tree?
 Yes. The last element of each branch depends on the parity of m and n. See table below.
