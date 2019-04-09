@@ -9,7 +9,7 @@ That was easy, but what happens when you have <a href="https://www.codecogs.com/
 You can measure all numbers of gallons up to n as long as <a href="https://www.codecogs.com/eqnedit.php?latex=m" target="_blank"><img src="https://latex.codecogs.com/gif.latex?m" title="m" /></a> and <a href="https://www.codecogs.com/eqnedit.php?latex=n" target="_blank"><img src="https://latex.codecogs.com/gif.latex?n" title="n" /></a> are relatively prime, that is <a href="https://www.codecogs.com/eqnedit.php?latex=GCD(m,n)=1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?GCD(m,n)=1" title="GCD(m,n)=1" /></a>. If <a href="https://www.codecogs.com/eqnedit.php?latex=m" target="_blank"><img src="https://latex.codecogs.com/gif.latex?m" title="m" /></a> and <a href="https://www.codecogs.com/eqnedit.php?latex=n" target="_blank"><img src="https://latex.codecogs.com/gif.latex?n" title="n" /></a> are not relatively prime, you can measure only number of gallons that are multiples of their greatest common divisor.
 
 <p align="center">
-  <img src="https://github.com/marie-yau/Algorithmic-Projects/blob/master/Water%20Jug/images/(3%2C5)%20and%20(3%2C6)%20solutions.png" width="600" title="Github Logo">
+  <img src="https://github.com/marie-yau/Algorithmic-Projects/blob/master/images/(3%2C5)%20and%20(3%2C6)%20solutions.png" width="600" title="Github Logo">
 </p>
 
 ## How do you find a solution that measures x number of gallons?
@@ -21,7 +21,7 @@ Every tree has <a href="https://www.codecogs.com/eqnedit.php?latex=\frac{2(m&plu
 Every tree has 2 main branches one from fill bucket1 and the other one from fill bucket2. Both branches have the same length <a href="https://www.codecogs.com/eqnedit.php?latex=\frac{m&plus;n}{2}-1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{m&plus;n}{2}-1" title="\frac{m+n}{2}-1" /></a>. 
 
 <p align="center">
-  <img src="https://github.com/marie-yau/Algorithmic-Projects/blob/master/Water%20Jug/images/(3%2C5)%20graph%2C%20tree.png" width="600" title="Github Logo">
+  <img src="https://github.com/marie-yau/Algorithmic-Projects/blob/master/images/(3%2C5)%20graph%2C%20tree.png" width="600" title="Github Logo">
 </p>
 
 You can see how tree looks like on Figure 2b. Figure 2a shows plotted graph in xy-coordinates. 
@@ -34,7 +34,7 @@ Because at any given moment at least one bucket is either full or empty, all buc
 ## How is the graph plotted in xy-coordinates?
 See the animation below. Every move stands for one of the allowed operations - fill bucket1, fill bucket2, empty bucket1, empty bucket2, pour from bucket1 to bucket2 and pour from bucket2 to bucket1. Note that the animation doesn't contain <a href="https://www.codecogs.com/eqnedit.php?latex=(m,n)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?(m,n)" title="(m,n)" /></a> because this point can be in either branch and it was distracting from the symmetry.
 <p align="center">
-  <img src="https://github.com/marie-yau/Algorithmic-Projects/blob/master/Water%20Jug/images/(3%2C5).gif" width="300" title="Github Logo">
+  <img src="https://github.com/marie-yau/Algorithmic-Projects/blob/master/images/(3%2C5).gif" width="300" title="Github Logo">
 </p>
 
 ## Does the plotted graph in xy-coordinates depends on parity of m and n?
@@ -43,19 +43,19 @@ Yes, the graph looks different based on parity of m and n:
 - m is odd, n is odd: The middle diagonal is missing.
 - m is odd, n is even: The middle horizontal line is missing.
 <p align="center">
-  <img src="https://github.com/marie-yau/Algorithmic-Projects/blob/master/Water%20Jug/images/parity.png" width="600" title="Github Logo">
+  <img src="https://github.com/marie-yau/Algorithmic-Projects/blob/master/images/parity.png" width="600" title="Github Logo">
 </p>
 
 ## Is the plotted graph in xy-coordinates symmetric?
 Yes, it is. Note that when you flip point <a href="https://www.codecogs.com/eqnedit.php?latex=(x,y)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?(x,y)" title="(x,y)" /></a> about <a href="https://www.codecogs.com/eqnedit.php?latex=\frac{n}{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{n}{2}" title="\frac{n}{2}" /></a> horizontal line and then flip it again about <a href="https://www.codecogs.com/eqnedit.php?latex=\frac{m}{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{m}{2}" title="\frac{m}{2}" /></a> vertical line, you get point <a href="https://www.codecogs.com/eqnedit.php?latex=(m-x,n-y)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?(m-x,n-y)" title="(m-x,n-y)" /></a> that is colored with the other color.
 
 <p align="center">
-  <img src="https://github.com/marie-yau/Algorithmic-Projects/blob/master/Water%20Jug/images/equationSymmetry.png" width="600" title="Github Logo">
+  <img src="https://github.com/marie-yau/Algorithmic-Projects/blob/master/images/equationSymmetry.png" width="600" title="Github Logo">
 </p>
 
 ## Is it possible to find out last node of each branch of the tree?
 Yes. The last element of each branch depends on the parity of m and n. See table below.
 
 <p align="center">
-  <img src="https://github.com/marie-yau/Algorithmic-Projects/blob/master/Water%20Jug/images/tableLastElement.png" width="300" title="Github Logo">
+  <img src="https://github.com/marie-yau/Algorithmic-Projects/blob/master/images/tableLastElement.png" width="300" title="Github Logo">
 </p>
